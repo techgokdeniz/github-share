@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <div className="min-h-screen">
         <Header />
-        <div className="container md:mt-5 mx-auto p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 md:items-center">
+        <div className="container md:mt-16 mx-auto p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 md:items-center">
           <div>
             <LeftSide />
           </div>

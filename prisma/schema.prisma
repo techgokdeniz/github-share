@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  username    String   @unique @db.VarChar(250)
+  name        String?  @db.VarChar(250)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  avatarUrl   String?  @db.VarChar(500)
+  followers   Int      @default(0)
+  following   Int      @default(0)
+  bio         String?  @db.VarChar(500)
+  favProgLang String?  @db.VarChar(255)
+  starCount   Int?     @default(0)
+  blogUrl     String?  @db.VarChar(250)
+  reposCount  Int?     @default(0)
+}

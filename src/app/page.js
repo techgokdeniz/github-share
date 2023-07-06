@@ -2,6 +2,7 @@ import Header from "./component/header";
 import LeftSide from "./component/landing/leftside";
 import RightSide from "./component/landing/rightside";
 import AddUser from "./component/addUser";
+import Tabs from "./component/tabs";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
       </div>
       <div id="test" className="container mx-auto p-2 md:p-4 ">
         <AddUser />
+      </div>
+      <div className="container mx-auto p-2 md:p-4 ">
+        <Tabs />
       </div>
       <div className="container mx-auto  p-2 md:p-4 mt-10">
         <div className="p-6">Footer</div>

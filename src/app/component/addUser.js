@@ -15,9 +15,9 @@ const AddUser = () => {
     const data = await addUser(user).finally(() => setLoading(false));
 
     if (!data.success) {
-      return toast.error(data.data);
+      return toast.error(data.message);
     } else {
-      return toast.success(data.data);
+      return toast.success(data.message);
     }
   };
 

@@ -21,7 +21,7 @@ export async function POST(request) {
     if (!username) {
       return NextResponse.json({
         success: false,
-        data: "Username is empty!",
+        message: "Username is empty!",
       });
     }
 
@@ -34,7 +34,7 @@ export async function POST(request) {
     if (userInDb) {
       return NextResponse.json({
         success: false,
-        data: "User already exists!",
+        message: "User already exists!",
       });
     }
 
@@ -43,7 +43,7 @@ export async function POST(request) {
     if (!userResp.ok) {
       return NextResponse.json({
         success: false,
-        data: "User not found!",
+        message: "User not found!",
       });
     }
 
@@ -102,12 +102,12 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      data: "User added!",
+      message: "User added!",
     });
   } catch (err) {
     return NextResponse.json({
       success: false,
-      data: err.message,
+      message: err.message,
     });
   }
 }

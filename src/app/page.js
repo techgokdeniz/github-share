@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <div className="min-h-screen">
         <Header />
-        <div className="container md:mt-16 mx-auto p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 md:items-center">
+        <div className="container md:mt-16 mx-auto p-4 md:p-0 grid grid-cols-1 gap-10 md:gap-0 md:grid-cols-2 md:items-center">
           <div>
             <LeftSide />
           </div>

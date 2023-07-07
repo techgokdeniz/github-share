@@ -6,12 +6,10 @@ const prisma = new PrismaClient();
 export async function GET(request) {
   let data = await prisma.user.findMany({
     orderBy: {
-      id: "desc",
+      followers: "desc",
     },
     take: 5,
   });
-
-  data = data.sort(() => Math.random() - 0.5);
 
   return NextResponse.json({
     success: true,

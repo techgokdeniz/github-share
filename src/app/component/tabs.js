@@ -7,31 +7,45 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import RandomUser from "./tabs/randomUser";
+import FollowUser from "./tabs/followUser";
+import RepoUser from "./tabs/repoUser";
+import { useState } from "react";
 
-export default function Example() {
+export default function TabsComponent() {
+  const [activeTab, setActiveTab] = useState("randomUser");
+
   const data = [
     {
-      label: "Random User",
+      label: "Rastgele Kullanıcılar",
       value: "randomUser",
       component: <RandomUser />,
     },
     {
-      label: "Lang User",
-      value: "langUser",
-      component: "abc",
+      label: "En Fazla Takipçiye Sahip Kullanıcılar",
+      value: "followUser",
+      component: <FollowUser />,
     },
     {
-      label: "abc User",
-      value: "abcUser",
-      component: "abc",
+      label: "En Fazla Repositoriye Sahip Kullanıcılar",
+      value: "repoUser",
+      component: <RepoUser />,
     },
   ];
 
   return (
-    <Tabs value="randomUser" className="p-6">
-      <TabsHeader>
+    <Tabs value={activeTab}>
+      <TabsHeader className="flex flex-col md:flex-row gap-2">
         {data.map(({ label, value }) => (
-          <Tab key={value} value={value}>
+          <Tab
+            key={value}
+            value={value}
+            onClick={() => setActiveTab(value)}
+            className={` ${
+              activeTab === value
+                ? "text-black dark:font-semibold"
+                : "dark:text-white"
+            } `}
+          >
             {label}
           </Tab>
         ))}

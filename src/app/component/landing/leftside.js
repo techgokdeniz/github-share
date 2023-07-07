@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const LeftSide = () => {
   return (
-    <div className="flex gap-4 p-6 flex-col items-start">
+    <div className="flex gap-4 flex-col items-start">
       <Image
         src={StockPhoto}
         alt="Stock Photo"

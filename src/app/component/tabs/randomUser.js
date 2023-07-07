@@ -5,7 +5,9 @@ import Link from "next/link";
 
 const RandomUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("/api/getrandomuser", fetcher);
+  const { data, error, isLoading } = useSWR("/api/getrandomuser", fetcher, {
+    revalidateOnFocus: false,
+  });
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Ooops... {error.message}</div>;

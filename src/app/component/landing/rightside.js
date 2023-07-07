@@ -4,7 +4,7 @@ import useSWR from "swr";
 
 const RightSide = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("/api/getmostfollow", fetcher);
+  const { data, error, isLoading } = useSWR("/api/getlastuser", fetcher);
 
   if (error) return <div>Ooops... {error.message}</div>;
   return (

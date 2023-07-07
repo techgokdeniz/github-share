@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import { isEmpty } from "lodash";
 import { toast } from "react-hot-toast";
 import { addUser } from "../service/userService";
+import { useRouter } from "next/navigation";
 
 const AddUser = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleClick = async () => {
     if (isEmpty(user)) return toast.error("Kullanıcı Adı Boş Olamaz!");
@@ -15,6 +17,7 @@ const AddUser = () => {
     const data = await addUser(user).finally(() => setLoading(false));
 
     if (!data.success) {
+      router.refresh();
       return toast.error(data.message);
     } else {
       return toast.success(data.message);

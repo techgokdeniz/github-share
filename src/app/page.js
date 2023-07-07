@@ -2,7 +2,8 @@ import Header from "./component/header";
 import LeftSide from "./component/landing/leftside";
 import RightSide from "./component/landing/rightside";
 import AddUser from "./component/addUser";
-import Tabs from "./component/tabs";
+import TabsComponent from "./component/tabs";
+import Footer from "./component/footer";
 
 export default function Home() {
   return (
@@ -18,14 +19,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="test" className="container mx-auto p-2 md:p-4 ">
-        <AddUser />
-      </div>
-      <div className="container mx-auto p-2 md:p-4 ">
-        <Tabs />
-      </div>
-      <div className="container mx-auto  p-2 md:p-4 mt-10">
-        <div className="p-6">Footer</div>
+      <div
+        id="test"
+        className="min-h-screen pt-16 md:pt-16 flex justify-between flex-col"
+      >
+        <div className="container mx-auto p-2 md:p-4 gap-8 flex flex-col ">
+          <AddUser />
+          <TabsComponent />
+        </div>
+        <div className="container mx-auto  p-2 md:p-4 ">
+          <Footer />
+        </div>
       </div>
     </main>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Sketlon = () => {
+const UserSketlon = () => {
   return (
     <div className="flex w-full hover:scale-x-95 transition-all duration-200 justify-between gap-x-6 py-4 px-2 border rounded-md border-gray-200 dark:border-gray-700">
       <div className="flex gap-x-4 items-center">
@@ -28,4 +28,4 @@ const Sketlon = () => {
   );
 };
 
-export default Sketlon;
+export default UserSketlon;

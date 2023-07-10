@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Sketlon from "./sketlon";
+import Sketlon from "./rightSketlon.js";
 
 const Footer = () => {
   return (

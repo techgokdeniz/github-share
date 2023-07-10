@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import useSWR from "swr";
+import Sketlon from "../rightSketlon";
 
 const RightSide = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("/api/getlastuser", fetcher, {
+  const { data, error, isLoading } = useSWR("tr/api/getlastuser", fetcher, {
     revalidateOnFocus: false,
   });
 
@@ -13,7 +14,7 @@ const RightSide = () => {
   return (
     <div className="flex flex-col md:p-0 md:items-end md:justify-end">
       {isLoading ? (
-        <div>Loading...</div>
+        <Sketlon />
       ) : (
         <div className="px-6  max-w-[400px] md:px-12 md:py-6 shadow-md rounded-2xl items-center py-4 dark:bg-gray-900 bg-gray-100 flex justify-between flex-col gap-4">
           <h1 className="text-lg font-semibold w-[250px] text-center dark:text-gray-300">

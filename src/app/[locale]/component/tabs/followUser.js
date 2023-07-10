@@ -3,18 +3,19 @@ import useSWR from "swr";
 import UserComponent from "../usercomponent";
 import Link from "next/link";
 import { memo } from "react";
-import Sketlon from "../sketlon";
+import UserSketlon from "../Usersketlon";
 
 const FollowUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("/api/getmostfollow", fetcher, {
+
+  const { data, error, isLoading } = useSWR("tr/api/getmostfollow", fetcher, {
     revalidateOnFocus: false,
   });
 
   if (isLoading)
     return (
       <div>
-        <Sketlon />
+        <UserSketlon />
       </div>
     );
   if (error) return <div>Ooops... {error.message}</div>;

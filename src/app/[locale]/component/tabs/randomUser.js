@@ -2,18 +2,19 @@ import React from "react";
 import useSWR from "swr";
 import UserComponent from "../usercomponent";
 import Link from "next/link";
-import Sketlon from "../sketlon";
+import { useRouter } from "next/navigation";
+import UserSketlon from "../Usersketlon";
 
 const RandomUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("/api/getrandomuser", fetcher, {
+  const { data, error, isLoading } = useSWR("tr/api/getrandomuser", fetcher, {
     revalidateOnFocus: false,
   });
 
   if (isLoading)
     return (
       <div>
-        <Sketlon />
+        <UserSketlon />
       </div>
     );
   if (error) return <div>Ooops... {error.message}</div>;

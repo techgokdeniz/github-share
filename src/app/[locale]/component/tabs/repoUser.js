@@ -2,18 +2,18 @@ import React from "react";
 import useSWR from "swr";
 import UserComponent from "../usercomponent";
 import Link from "next/link";
-import Sketlon from "../sketlon";
+import UserSketlon from "../Usersketlon";
 
 const RepoUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("/api/getmostrepo", fetcher, {
+  const { data, error, isLoading } = useSWR("tr/api/getmostrepo", fetcher, {
     revalidateOnFocus: false,
   });
 
   if (isLoading)
     return (
       <div>
-        <Sketlon />
+        <UserSketlon />
       </div>
     );
   if (error) return <div>Ooops... {error.message}</div>;

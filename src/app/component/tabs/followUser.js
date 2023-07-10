@@ -3,6 +3,7 @@ import useSWR from "swr";
 import UserComponent from "../usercomponent";
 import Link from "next/link";
 import { memo } from "react";
+import Sketlon from "../sketlon";
 
 const FollowUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -10,7 +11,12 @@ const FollowUser = () => {
     revalidateOnFocus: false,
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <div>
+        <Sketlon />
+      </div>
+    );
   if (error) return <div>Ooops... {error.message}</div>;
 
   return (

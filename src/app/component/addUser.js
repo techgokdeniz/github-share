@@ -28,9 +28,10 @@ const AddUser = () => {
       </h1>
       <div className="w-full">
         <input
+          placeholder="Github Kullanıcı Adı Örnek : techgokdeniz"
           name="username"
           onChange={(e) => setUser(e.target.value)}
-          className="w-full border-2 border-gray-300 rounded-lg p-2 mt-2 focus:outline-none focus:border-blue-500"
+          className="w-full border-2 border-gray-300 rounded-lg p-2 mt-2 dark:border-gray-600 focus:outline-none focus:border-blue-500"
         />
       </div>
       <button
@@ -40,7 +41,7 @@ const AddUser = () => {
           loading && "opacity-50 cursor-not-allowed"
         }}`}
       >
-        Ekle
+        Sisteme Ekle
       </button>
     </div>
   );

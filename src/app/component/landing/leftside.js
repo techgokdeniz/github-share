@@ -5,17 +5,14 @@ import Image from "next/image";
 const LeftSide = () => {
   return (
     <div className="flex gap-4 flex-col items-start">
-      <Image
-        src={StockPhoto}
-        alt="Stock Photo"
-        height={300}
-        className="rounded-full"
-      />
-      <h1 className="text-4xl font-bold text-gray-700 dark:text-gray-300">
-        GitHub Adder
+      <div className="relative hidden md:w-[300px] md:h-[300px] md:block">
+        <Image src={StockPhoto} alt="Stock Photo" className="rounded-full" />
+      </div>
+      <h1 className="text-2xl md:text-4xl font-bold mt-10 md:mt-0 text-gray-700 dark:text-gray-300">
+        GitHub Share Profil
       </h1>
-      <h2 className="text-3xl font-semibold text-gray-700 dark:text-gray-300 max-w-lg">
-        Takipçi Sayını Yükseltmek İçin Yenilikçi Bir Web Uygulaması
+      <h2 className="text-xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 max-w-lg">
+        GitHub Hesabınızı Paylaşın ve Daha Fazla Kişiye Ulaşın
       </h2>
       <p className="text-gray-700 dark:text-gray-300">
         GitHub Adder, GitHub kullanıcılarının birbirlerini takip ederek takipçi

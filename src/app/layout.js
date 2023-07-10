@@ -13,14 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head />
-      <Providers>
-        <body className={montserrat.className}>
+      <body className={montserrat.className}>
+        <Providers>
           <Toaster position="bottom-right" />
           {children}
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   );
 }

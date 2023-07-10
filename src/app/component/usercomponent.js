@@ -43,7 +43,7 @@ const UserComponent = ({
             <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
           </div>
           <p className="text-xs leading-5 dark:text-white text-gray-500">
-            {favoriteLanguage || "Dil Yok"}
+            Favori Yazılım Dili : {favoriteLanguage || "Dil Yok"}
           </p>
         </div>
       </div>

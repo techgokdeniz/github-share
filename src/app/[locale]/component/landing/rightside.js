@@ -2,12 +2,14 @@
 import Image from "next/image";
 import useSWR from "swr";
 import Sketlon from "../rightSketlon";
-
+import { useTranslations } from "next-intl";
 const RightSide = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("tr/api/getlastuser", fetcher, {
+  const { data, error, isLoading } = useSWR("en/api/getlastuser", fetcher, {
     revalidateOnFocus: false,
   });
+
+  const t = useTranslations("leftSide");
 
   if (error) return <div>Ooops... {error.message}</div>;
 
@@ -17,8 +19,8 @@ const RightSide = () => {
         <Sketlon />
       ) : (
         <div className="px-6  max-w-[400px] md:px-12 md:py-6 shadow-md rounded-2xl items-center py-4 dark:bg-gray-900 bg-gray-100 flex justify-between flex-col gap-4">
-          <h1 className="text-lg font-semibold w-[250px] text-center dark:text-gray-300">
-            Sisteme Son Eklenen Kullanıcı
+          <h1 className="text-lg text-gray-700 font-semibold w-[250px] text-center dark:text-gray-300">
+            {t("last")}
           </h1>
           <Image
             className="rounded-full border-2"
@@ -27,10 +29,10 @@ const RightSide = () => {
             height={200}
             width={200}
           />
-          <h1 className="text-lg font-semibold dark:text-gray-300 ">
+          <h1 className="text-lg font-semibold text-gray-700 dark:text-gray-300 ">
             {isLoading ? "loading..." : data.data.name}
           </h1>
-          <p className="text-center">
+          <p className="text-center text-gray-700 dark:text-gray-300">
             {isLoading ? "loading..." : data.data.bio}
           </p>
         </div>

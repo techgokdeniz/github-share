@@ -7,7 +7,7 @@ import UserSketlon from "../Usersketlon";
 
 const RandomUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("tr/api/getrandomuser", fetcher, {
+  const { data, error, isLoading } = useSWR("en/api/getrandomuser", fetcher, {
     revalidateOnFocus: false,
   });
 

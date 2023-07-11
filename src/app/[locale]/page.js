@@ -7,7 +7,7 @@ import Footer from "./component/footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-gray-50 dark:bg-black">
       <div className="min-h-screen">
         <Header />
         <div className="container md:mt-16 mx-auto p-4 md:p-0 grid grid-cols-1 gap-10 md:gap-0 md:grid-cols-2 md:items-center">
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div
         id="test"
-        className="min-h-screen pt-16 md:pt-16 flex justify-between flex-col"
+        className="min-h-screen pt-4 md:pt-16 flex justify-between flex-col"
       >
         <div className="container mx-auto p-2 md:p-4 gap-8 flex flex-col ">
           <AddUser />

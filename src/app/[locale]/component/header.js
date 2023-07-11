@@ -12,7 +12,7 @@ const Header = () => {
         <Link href="/">
           <div className="font-bold flex gap-4 items-center cursor-pointer">
             <BsGithub className="inline-block text-2xl text-gray-700 dark:text-gray-300" />
-            <span className="text-xl text-gray-700 dark:text-gray-300">
+            <span className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
               {t("title")}
             </span>
           </div>

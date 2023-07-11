@@ -15,21 +15,15 @@ const LeftSide = () => {
         {t("title")}
       </h1>
       <h2 className="text-xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 max-w-lg">
-        GitHub Hesabınızı Paylaşın ve Daha Fazla Kişiye Ulaşın
+        {t("subtitle")}
       </h2>
-      <p className="text-gray-700 dark:text-gray-300">
-        GitHub Adder, GitHub kullanıcılarının birbirlerini takip ederek takipçi
-        sayılarını artırmalarını sağlayan yenilikçi bir web uygulamasıdır.
-        GitHub, açık kaynaklı yazılım platformu olarak dünya çapında milyonlarca
-        geliştirici tarafından kullanılmaktadır ve aktif bir topluluğa sahiptir.
-        Bu toplulukta, geliştiriciler projelerini tanıtmak, geri bildirim almak
-        veya işbirliği yapmak amacıyla birbirlerini takip etmektedir.
-      </p>
+      <p className="text-gray-700 dark:text-gray-300">{t("desc")}</p>
       <Link
         href="#test"
-        className=" w-full text-center  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-4 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        className="w-full text-center transition-all duration-200  text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-4 py-2.5 dark:bg-gray-600 dark:hover:bg-gray-800 focus:outline-none dark:focus:ring-gray-900 ${
+          "
       >
-        Github Hesabını Sisteme Ekle
+        {t("homebutton")}
       </Link>
     </div>
   );

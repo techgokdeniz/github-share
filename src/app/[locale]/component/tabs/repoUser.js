@@ -6,7 +6,7 @@ import UserSketlon from "../Usersketlon";
 
 const RepoUser = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("tr/api/getmostrepo", fetcher, {
+  const { data, error, isLoading } = useSWR("en/api/getmostrepo", fetcher, {
     revalidateOnFocus: false,
   });
 

@@ -1,5 +1,24 @@
 {
   "leftSide": {
-    "title": "Github Share Profil"
+    "title": "Github Share Profil",
+    "subtitle": "Share Your Github Account Reach More People",
+    "homebutton": "Add Github Account to System",
+    "last": "Last Added User to the System",
+    "add": "Submit Username to Add Github Account to System!",
+    "placheholder": "Github Username",
+    "desc": "I have developed an application called Github Share Profile. With this application, people can share their github accounts with each other and interact with these people by sorting their github accounts randomly or according to the number of followers or repositories. This application provides a platform for users to discover and interact with other users, follow them, and contribute to their projects by sharing their github profiles. Github Share Profile is a social network that encourages connection and information exchange among developers."
+  },
+  "tabs": {
+    "random": "Random Users",
+    "follow": "Most Followers Users",
+    "repo": "Most Repositories Users"
+  },
+  "users": {
+    "follow": "Followers",
+    "following": "Following",
+    "fav": "Favorite Programming Language : ",
+    "noname": "Name Not Specified",
+    "nobio": "Bio Not Specified",
+    "nofav": "Not Specified"
   }
 }

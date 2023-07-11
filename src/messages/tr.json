@@ -1,5 +1,24 @@
 {
   "leftSide": {
-    "title": "Github Profil Paylaşımı"
+    "title": "Github Profil Paylaşımı",
+    "subtitle": "Github Hesabınızı Paylaşın Daha Fazla Kişiye Erişin",
+    "homebutton": "Github Hesabını Sisteme Ekle",
+    "last": "Sisteme Son Eklenen Kullanıcı",
+    "add": "Sisteme Github Hesabını Eklemek İçin Kullanıcı Adını Gönder!",
+    "placheholder": "Github Kullanıcı Adı",
+    "desc": "Github Share Profil, insanların github hesaplarını birbiri ile paylaşmalarını sağlayan bir uygulamadır. Bu uygulama sayesinde kullanıcılar, random bir şekilde ya da takipçi ve repo sayılarına göre sıralanmış hesapları keşfedebilir. Hesapları keşfettikten sonra bu insanlarla etkileşime geçebilir, takip edebilir ve projelerine katkıda bulunabilirler. Kullanıcıların github profilini paylaşarak, daha fazla kişiyle etkileşime geçmeleri ve projelerini tanıtmaları için bir platform sağlanmaktadır. Github Share Profil, geliştiriciler arasında bağlantı kurmayı ve bilgi alışverişini teşvik eden bir sosyal ağdır."
+  },
+  "tabs": {
+    "random": "Rastgele Kullanıcılar",
+    "follow": "En Fazla Takipçiye Sahip Kullanıcılar",
+    "repo": "En Fazla Repositoriye Sahip Kullanıcılar"
+  },
+  "users": {
+    "follow": "Takipçi",
+    "following": "Takip Edilen",
+    "fav": "Favori Yazılım Dili : ",
+    "noname": "İsim Belirtilmemiş",
+    "nobio": "Biyografi Belirtilmemiş",
+    "nofav": "Bulunamadı"
   }
 }

@@ -10,23 +10,25 @@ import RandomUser from "./tabs/randomUser";
 import FollowUser from "./tabs/followUser";
 import RepoUser from "./tabs/repoUser";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState("randomUser");
+  const t = useTranslations("tabs");
 
   const data = [
     {
-      label: "Rastgele Kullanıcılar",
+      label: `${t("random")}`,
       value: "randomUser",
       component: <RandomUser />,
     },
     {
-      label: "En Fazla Takipçiye Sahip Kullanıcılar",
+      label: `${t("follow")}`,
       value: "followUser",
       component: <FollowUser />,
     },
     {
-      label: "En Fazla Repositoriye Sahip Kullanıcılar",
+      label: `${t("repo")}`,
       value: "repoUser",
       component: <RepoUser />,
     },

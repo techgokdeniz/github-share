@@ -4,7 +4,8 @@ import Providers from "./provider/provider";
 import { Toaster } from "react-hot-toast";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
-
+import { NextIntlClientProvider } from "next-intl";
+import { Analytics } from "@vercel/analytics/react";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,7 +13,7 @@ export const metadata = {
   description: "Add users to your github account",
 };
 
-export default function RootLayout({ children, params }) {
+export default async function RootLayout({ children, params }) {
   const locale = useLocale();
 
   // Show a 404 error if the user requests an unknown locale
@@ -20,13 +21,23 @@ export default function RootLayout({ children, params }) {
     notFound();
   }
 
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={montserrat.className}>
-        <Providers>
-          <Toaster position="bottom-right" />
-          {children}
-        </Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>
+            <Toaster position="bottom-right" />
+            {children}
+            <Analytics />
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

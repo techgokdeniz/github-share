@@ -20,6 +20,7 @@ const AddUser = () => {
     if (!data.success) {
       return toast.error(data.message);
     } else {
+      window.location.reload();
       return toast.success(data.message);
     }
   };

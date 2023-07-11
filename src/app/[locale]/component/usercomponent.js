@@ -26,7 +26,7 @@ const UserComponent = ({
             {name || t("noname")}
           </p>
           <p className="mt-1 truncate text-xs leading-5 dark:text-white text-gray-500">
-            {bio.slice(0, 50) + "..." || t("nobio")}
+            {bio ? bio.slice(0, 50) : t("nobio")}
           </p>
         </div>
       </div>
